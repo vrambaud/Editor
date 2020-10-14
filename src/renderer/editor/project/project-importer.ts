@@ -458,7 +458,7 @@ export class ProjectImporter {
         n.parent = n.getScene().getNodeByID(n.metadata._waitingParentId) ?? n.getScene().getTransformNodeByID(n.metadata._waitingParentId);
 
         delete n.metadata._waitingParentId;
-        delete n._waitingParentId;
+        n._waitingParentId = null;
     }
 
     /**
